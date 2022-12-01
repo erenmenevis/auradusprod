@@ -1,0 +1,33 @@
+{
+  "name": "auradus",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@googlemaps/react-wrapper": "^1.1.35",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.13",
+    "@react-google-maps/api": "^2.16.0",
+    "axios": "^1.1.3",
+    "bootstrap": "^5.2.2",
+    "cloudinary": "^1.32.0",
+    "embla-carousel-autoplay": "^7.0.4",
+    "embla-carousel-react": "^7.0.4",
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.1",
+    "mapbox-gl": "^2.10.0",
+    "mdb-react-ui-kit": "^5.0.0",
+    "next": "13.0.1",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "18.2.0",
+    "react-map-gl": "^7.0.19"
+  }
+}

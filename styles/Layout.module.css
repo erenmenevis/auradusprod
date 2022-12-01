@@ -1,0 +1,63 @@
+.bodyContainer {
+    height: 90vh;
+    width: 100%;
+    margin: 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #041F67;
+    background-image: url('../assets/bg.svg');
+    border: 5px solid green;
+
+}
+
+.contentContainer {
+    width: 100%;
+    height: 200;
+    margin: 10% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
+    border: 5px solid orange;
+  }
+  .wrapper {
+    margin: auto;
+  }
+
+  .navBar {
+    background-color: #041F67;
+  }
+
+  .container {
+    width: auto;
+  }
+
+  
+  .footer {
+    background-color: #041F67;
+  }
+
+  .body{
+    background-color: yellow;
+    margin: auto;
+  }
+
+  /*
+  .toggle {
+    background-color: aqua;
+    border: 5px solid white;
+  }
+
+
+  .collapse {
+    border: 5px solid red;
+  }
+
+  .nav {
+    border: 5px solid pink;
+  }
+
+*/
