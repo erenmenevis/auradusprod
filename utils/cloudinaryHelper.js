@@ -21,8 +21,10 @@ async function getCloudinaryResources(category) {
   function getLogoOverlayed(image_public_id) {
     const url = cloudinary.url(image_public_id,
       {
+        height: 500,
+        width: 400,
         angle: 0, gravity: "north_east",
-        overlay: { url: "https://res.cloudinary.com/dslizsuil/image/upload/v1668648848/logo-no-background_vmxnbs.png" }, width: 100, x: 0, y: 0, crop: "scale"
+        overlay: { url: "https://res.cloudinary.com/dslizsuil/image/upload/v1668648848/logo-no-background_vmxnbs.png" }, height: 100, width:100, x: 0, y: 0, crop: "scale"
       }
     )
     return url;

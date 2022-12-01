@@ -25,7 +25,7 @@ export default function Home(props) {
             <Link className={styles.link} href="/urunlerimiz/dusakabinler">
                 <CardList
                     title="Sürgülü Kayar Kabinler"
-                    src="https://res.cloudinary.com/dslizsuil/image/upload/w_700/v1667441545/Carousel/folding2_vvxzcx.jpg"
+                    src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1669907036/Anasayfa/s%C3%BCrg%C3%BCll%C3%BC_kayar_kabinler_ozaato.jpg"
                 />
             </Link>
             </div>
@@ -33,7 +33,7 @@ export default function Home(props) {
             <Link className={styles.link} href="/urunlerimiz/dusakabinler">
                 <CardList
                     title="Menteşeli Açılır Kabinler"
-                    src="https://res.cloudinary.com/dslizsuil/image/upload/w_700/v1667441545/Carousel/folding2_vvxzcx.jpg"
+                    src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1669907036/Anasayfa/mente%C5%9Feli_ac%C4%B1l%C4%B1r_kabin_gww5nb.jpg"
                 />
             </Link>
             </div>
@@ -41,7 +41,7 @@ export default function Home(props) {
             <Link className={styles.link} href="/urunlerimiz/dus-tekneleri-ve-kuvet-sistemleri">
                 <CardList
                     title="Duş Tekneleri"
-                    src="https://res.cloudinary.com/dslizsuil/image/upload/w_700/v1667441545/Carousel/folding2_vvxzcx.jpg"
+                    src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1669907035/Anasayfa/du%C5%9F_teknsei_up19np.jpg"
                 />
             </Link>
             </div>
@@ -49,7 +49,7 @@ export default function Home(props) {
             <Link className={styles.link} href="/urunlerimiz/cam-balkon">
                 <CardList
                     title="Cam Balkon"
-                    src="https://res.cloudinary.com/dslizsuil/image/upload/w_700/v1667441545/Carousel/folding2_vvxzcx.jpg"
+                    src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1669907035/Anasayfa/cam_balkon_gay3b8.jpg"
                 />
             </Link>
             </div>
@@ -57,7 +57,7 @@ export default function Home(props) {
             <Link className={styles.link} href="/urunlerimiz/profil-ve-cam-secenekleri">
                 <CardList
                     title="Profil Renkleri"
-                    src="https://res.cloudinary.com/dslizsuil/image/upload/w_700/v1667441545/Carousel/folding2_vvxzcx.jpg"
+                    src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1669907036/Anasayfa/profil_secenekleri_grclbw.jpg"
                 />
             </Link>
             </div>
@@ -65,7 +65,7 @@ export default function Home(props) {
             <Link className={styles.link} href="/urunlerimiz/profil-ve-cam-secenekleri">
                 <CardList
                     title="Cam Seçenekleri"
-                    src="https://res.cloudinary.com/dslizsuil/image/upload/w_700/v1667441545/Carousel/folding2_vvxzcx.jpg"
+                    src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1669907036/Anasayfa/profil_secenekleri_grclbw.jpg"
                 />
             </Link>
             </div>
