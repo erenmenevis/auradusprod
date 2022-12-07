@@ -14,7 +14,8 @@ export default function Home(props) {
       <Head>
         <title>Aura Dus</title>
         <meta name="description" content="Aura Dusakabinleri" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="google-site-verification" content="1sQtIFscYiHI_XTWr_0nt0crEpd6u9Mz_YjZa17a7lg" />
+        <link rel="icon" href="/logo-no-background.png" />
       </Head>
 
       <main className={styles.wrapper}>
