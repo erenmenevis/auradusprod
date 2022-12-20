@@ -82,7 +82,7 @@ export default function Home(props) {
 };
 
 export async function getStaticProps(context) {
-  const resources = await getCloudinaryResources("Carousel");
+  const resources = await getCloudinaryResources("donen-ekran");
   const images = resources.map(resource => {
     return {
       id: resource.asset_id,

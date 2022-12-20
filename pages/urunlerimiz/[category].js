@@ -87,7 +87,7 @@ export async function getStaticPaths() {
       { params: { category: 'dus-tekneleri-ve-kuvet-sistemleri' } },
       { params: { category: 'cam-balkon' } },
       { params: { category: 'clean-and-clean' } },
-      { params: { category: 'safety-film' } },
+      { params: { category: 'guvenlik-filmi' } },
       { params: { category: 'profil-ve-cam-secenekleri' } },
       { params: { category: 'aksesuarlar' } }
     ],

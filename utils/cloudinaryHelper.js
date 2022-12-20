@@ -10,7 +10,7 @@ async function getCloudinaryResources(category) {
   
     return cloudinary.v2.search.expression(
       `folder:${category}/*` // add your folder
-    ).with_field('tags').sort_by('public_id', 'desc').max_results(30).execute()
+    ).with_field('tags').sort_by('public_id', 'desc').execute()
       .then((result) => {
         //console.log(result)
         return result.resources
@@ -19,6 +19,7 @@ async function getCloudinaryResources(category) {
   }
   
   function getLogoOverlayed(image_public_id) {
+    //c_scale,h_500,w_400
     const url = cloudinary.url(image_public_id,
       {
         height: 500,
