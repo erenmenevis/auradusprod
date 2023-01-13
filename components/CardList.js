@@ -13,11 +13,15 @@ export default function CardList(props) {
             <Card.Body style={{margin: '1%', padding:'1%'}} >
                 <Card.Title style={{fontSize:'medium' }}>{title} </Card.Title>
                 <Card.Text>
-                    <img style={{ width: '100%',height: 'auto' }}
+
+                    {<img style={{ width: '100%',height: 'auto' }}
                         className="d-block"
                         src={src}
                         alt="First slide"
-                    />
+    />
+    
+    }
+                    
                 </Card.Text>
             </Card.Body>
         </Card>

@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
-import BSCarousel from '../components/BSCarousel'
 import CardList from '../components/CardList'
-import HomePageLinks from '../components/HomePageLinks'
+import BSCarousel from '../components/BSCarousel'
 import { getCloudinaryResources, getLogoOverlayed } from '../utils/cloudinaryHelper'
 
 
@@ -13,7 +12,8 @@ export default function Home(props) {
     <div>
       <Head>
         <title>Aura Dus</title>
-        <meta name="description" content="Aura Dusakabinleri" />
+        <meta name="description" content="Aura DusakabinleriAuraDuş cam balkon, duş teknesi, cam güvenlik filmi, cam kir koruma ilacı gibi ihtiyaçlara çözüm üretme konusundaki yetkinliği ile öncü firmalar arasındadır." />
+        <meta name="keywords" content="istanbul duşakabin, duşakabin istanbul, istanbul duşakabin fiyatları, duşakabin fiyatları, istanbul duş kabini, kompakt duş kabinleri, oval duşakabin, kare duşakabin, dikdörtgen duşakabin, duş, duşakabin, kabin, istanbul, duş teknesi, küvet, vitray, mutfak, banyo" />
         <meta name="google-site-verification" content="1sQtIFscYiHI_XTWr_0nt0crEpd6u9Mz_YjZa17a7lg" />
         <link rel="icon" href="/logo-no-background.png" />
       </Head>
@@ -23,7 +23,7 @@ export default function Home(props) {
           <BSCarousel images={images}/>
           <div className={styles.contentContainer}>
           <div style={{display:'flex', marginTop:'1rem'}}>
-            <Link className={styles.link} href="/urunlerimiz/dusakabinler">
+            <Link className={styles.link} href="/modeller/surgulu-kayar-kabinler">
                 <CardList
                     title="Sürgülü Kayar Kabinler"
                     src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1669907036/Anasayfa/s%C3%BCrg%C3%BCll%C3%BC_kayar_kabinler_ozaato.jpg"
@@ -31,7 +31,7 @@ export default function Home(props) {
             </Link>
             </div>
             <div style={{display:'flex', marginTop:'1rem'}}>
-            <Link className={styles.link} href="/urunlerimiz/dusakabinler">
+            <Link className={styles.link} href="/modeller/menteseli-acilir-kabinler">
                 <CardList
                     title="Menteşeli Açılır Kabinler"
                     src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1669907036/Anasayfa/mente%C5%9Feli_ac%C4%B1l%C4%B1r_kabin_gww5nb.jpg"

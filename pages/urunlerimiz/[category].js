@@ -1,13 +1,18 @@
 import { useState, useEffect, useMemo } from "react"
+import { useRouter } from "next/router";
 import CardList from '../../components/CardList';
+import LabelList from "../../components/LabelList";
 import { getCloudinaryResources, getLogoOverlayed, getTitle, getCategories, uniqueCategories } from '../../utils/cloudinaryHelper'
 import styles from "../../styles/Urunler.module.css"
 
 
 const Categories = (props) => {
+  const router = useRouter();
+  const model = router.query.model;
   const { images, categories } = props;
   const [productList, setProductList] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState();
+  const [selectedCategory, setSelectedCategory] = useState(model);
+  
   useEffect(() => {
     setProductList(images);
   }, []);
@@ -20,7 +25,10 @@ const Categories = (props) => {
     if (!selectedCategory) {
       return productList;
     }
-    return productList.filter((item) => item.tags.includes(selectedCategory));
+    return productList.filter((item) => {
+      if(selectedCategory === 'Tümü')
+        return item
+      return item.tags.includes(selectedCategory)});
   }
 
   var filteredList = useMemo(getFilteredList, [selectedCategory, productList]);
@@ -34,9 +42,18 @@ const Categories = (props) => {
     </div>
   )
   let i = 0
-  return <div>
+  return <div className={styles.content}>
+    <div className={styles.asideMenu}>
+        <ul onClick={handleCategoryChange}>
+        {categories.map((category) =>
+            <option key={category} value={category}>{category}</option>
+          )}
+          <option key="Tümü" value="Tümü">Tümü</option>
+        </ul>
+      </div>
     <div className={styles.wrapper}>
-      <div>Markaya göre seçiniz:</div>
+      {/*<LabelList categories={categories} images={images} /> */}
+      {/*
       <div>
         <select
           name="category-list"
@@ -49,6 +66,7 @@ const Categories = (props) => {
           )}
         </select>
       </div>
+*/}
       <div className={styles.productGridContainer}>
         {imageDivs}
       </div>
@@ -83,7 +101,8 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { category: 'dusakabinler' } },
+      { params: { category: 'menteseli-acilir-kabinler' } },
+      { params: { category: 'surgulu-kayar-kabinler' } }, ,
       { params: { category: 'dus-tekneleri-ve-kuvet-sistemleri' } },
       { params: { category: 'cam-balkon' } },
       { params: { category: 'clean-and-clean' } },

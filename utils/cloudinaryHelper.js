@@ -24,11 +24,18 @@ async function getCloudinaryResources(category) {
       {
         height: 500,
         width: 400,
-        angle: 0, gravity: "north_east",
-        overlay: { url: "https://res.cloudinary.com/dslizsuil/image/upload/v1668648848/logo-no-background_vmxnbs.png" }, height: 100, width:100, x: 0, y: 0, crop: "scale"
-      }
+        angle: 0, gravity: "north_east"
+      } 
     )
-    return url;
+    let img = cloudinary.image(image_public_id, {transformation: [
+      {height: 500, width: 400, crop: "scale"},
+      {gravity: "north_east", overlay: "logo-no-background_vmxnbs", width: 79, crop: "scale"}
+      ]});
+      //<img style={{ width: '100%',height: 'auto' }}
+      //const styledImg = img.replace("<img", "<img style={{ width: '100%',height: 'auto' }}")
+      let arr = img.split(" ");
+      img = img.split(" ")[1].replace("src='", "").slice(0, -1);
+    return img;
   
   }
   

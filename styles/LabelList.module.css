@@ -1,0 +1,115 @@
+.card {
+  justify-content: center;
+  align-items: center;
+}
+
+.cardLayout {
+
+  display: inline-block;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0
+}
+
+.cardTitle {
+  background-color: rgba(171, 204, 219, 0.52);
+  /*border: 5px solid rebeccapurple;*/
+  text-align: center;
+  vertical-align: center;
+  color: navy;
+  width: 100%;
+  font-size: 2.5vh;
+}
+
+.cardImg {
+  opacity: 0.8
+}
+
+.card:hover{
+  transform: scale(1.1);
+}
+.card:hover .cardImg {
+  opacity: 2;
+}
+
+.item {
+  background-color: lightblue;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-items: center;
+}
+
+.squareGrid {
+  /*The content width you use on your website*/
+  --content-width: 60vw;
+
+  /*The size of the gutter*/
+  --gutter: 5rem;
+
+  /*The amount of columns*/
+  --columns: 1;
+
+
+  /*This is the calculation for the row height.   */
+  --row-size: calc((var(--content-width) - (var(--gutter) * (var(--columns) - 1))) / var(--columns));
+
+  display: grid;
+
+  width: 100%;
+  max-width: var(--content-width);
+
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-auto-rows: var(--row-size);
+
+  grid-column-gap: var(--gutter);
+  grid-row-gap: var(--gutter);
+  gap: var(--gutter);
+
+}
+
+.wrapper {
+  width: 80%;
+  height: 100%;
+  min-height: 100vh;
+  padding: 3em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+/*
+.wrapper { 
+  width: 80%;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border: 5px solid rebeccapurple;
+}
+*/
+
+@media (min-width: 450px) {
+  .squareGrid {
+    --columns: 2;
+  }
+}
+
+@media (min-width: 750px) {
+  .squareGrid {
+    --columns: 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .squareGrid {
+    --columns: 4;
+  }
+}

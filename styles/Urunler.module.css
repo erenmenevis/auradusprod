@@ -1,3 +1,8 @@
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
 .wrapper { 
     width: 80%;
     height: 100%;
@@ -16,6 +21,52 @@
     min-height: 100vh;
     margin-top: 3rem;
     font-size: medium;
+}
+
+.asideMenu {
+  position: relative;
+  float: left;
+  width: 12.5rem;
+  background-color: #fff;
+  color: navy;
+  padding: 1.25rem;
+  margin-top: 3rem;
+}
+
+.asideMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.asideMenu li {
+  margin: 0.625rem 0;
+}
+
+.asideMenu option {
+  margin: 0.625rem 0;
+  color: navy;
+  text-decoration: none;
+  font-size: 2vh;
+  border-bottom: 0.063rem solid rgba(171, 204, 219, 0.52);
+}
+
+
+.asideMenu option:hover {
+  color: rgb(33, 137, 163);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+
+.asideMenu a {
+  color: navy;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.asideMenu a:hover {
+  color: #ccc;
 }
 
 
@@ -37,4 +88,13 @@
         padding: 1rem;
         font-size: medium;
     }
+    .productGridContainer {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-auto-rows: 1fr;
+      align-items: start;
+      min-height: 100vh;
+      margin-top: 3rem;
+      font-size: medium;
+  }
   }
