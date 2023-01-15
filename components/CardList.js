@@ -8,7 +8,7 @@ export default function CardList(props) {
         <Card
             bg={light}
             text={light}
-            style={{ width: '100%', margin: '0 1%' }}
+            style={{ width: '100%', margin: '0 1%', background: 'rgba(236, 236, 236, 0.8)'}}
         >
             <Card.Body style={{margin: '1%', padding:'1%'}} >
                 <Card.Title style={{fontSize:'medium' }}>{title} </Card.Title>
