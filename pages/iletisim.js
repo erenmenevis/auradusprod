@@ -1,8 +1,6 @@
 import Head from 'next/head'
 
 import styles from '../styles/Iletisim.module.css'
-import Map, { Marker } from 'react-map-gl';
-import RoomIcon from '@mui/icons-material/Room';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Card from 'react-bootstrap/Card';
 import GMaps from '../components/GMaps';

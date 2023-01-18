@@ -36,36 +36,7 @@ a {
   box-sizing: border-box;
 }
 
-aside {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 200px;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-}
 
-aside ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-aside li {
-  margin: 10px 0;
-}
-
-aside a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-aside a:hover {
-  color: #ccc;
-}
 /*
 img {
   position: relative;

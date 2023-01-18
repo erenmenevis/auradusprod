@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from "react"
 import { useRouter } from "next/router";
 import CardList from '../../components/CardList';
-import LabelList from "../../components/LabelList";
+import Preview from "../../components/Preview";
 import { getCloudinaryResources, getLogoOverlayed, getTitle, getCategories, uniqueCategories } from '../../utils/cloudinaryHelper'
 import styles from "../../styles/Urunler.module.css"
 
@@ -12,6 +12,48 @@ const Categories = (props) => {
   const { images, categories } = props;
   const [productList, setProductList] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(model);
+
+  const [clickedImg, setClickedImg] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+  const handleClick = (item, index) => {
+    setCurrentIndex(filteredList.findIndex((img) => img.id === index));
+    setClickedImg(item.url);
+  };
+
+  const handleRotationRight = () => {
+    const totalLength = filteredList.length;    
+    if (currentIndex + 1 >= totalLength) {
+      setCurrentIndex(0);
+      const newUrl = filteredList[0].url;
+      setClickedImg(newUrl);
+      return;
+    }
+    const newIndex = currentIndex + 1;
+    const newUrl = filteredList.filter((item) => {
+      return filteredList.indexOf(item) === newIndex;
+    });
+    const newItem = newUrl[0].url;
+    setClickedImg(newItem);
+    setCurrentIndex(newIndex);
+  };
+
+  const handleRotationLeft = () => {
+    const totalLength = filteredList.length;
+    if (currentIndex === 0) {
+      setCurrentIndex(totalLength - 1);
+      const newUrl = filteredList[totalLength - 1].url;
+      setClickedImg(newUrl);
+      return;
+    }
+    const newIndex = currentIndex - 1;
+    const newUrl = filteredList.filter((item) => {
+      return filteredList.indexOf(item) === newIndex;
+    });
+    const newItem = newUrl[0].url;
+    setClickedImg(newItem);
+    setCurrentIndex(newIndex);
+  };
   
   useEffect(() => {
     setProductList(images);
@@ -34,7 +76,7 @@ const Categories = (props) => {
   var filteredList = useMemo(getFilteredList, [selectedCategory, productList]);
 
   const imageDivs = filteredList.map((image) =>
-    <div key={image.id} style={{ display: 'flex', alignItems: 'center' }}>
+    <div key={image.id} style={{ display: 'flex', alignItems: 'center' }} onClick={() => handleClick(image, image.id)}>
       <CardList style={{ height: '30rem' }}
         title={image.title}
         src={image.url}
@@ -52,23 +94,18 @@ const Categories = (props) => {
         </ul>
       </div>
     <div className={styles.wrapper}>
-      {/*<LabelList categories={categories} images={images} /> */}
-      {/*
-      <div>
-        <select
-          name="category-list"
-          id="category-list"
-          onChange={handleCategoryChange}
-        >
-          <option value="">Tümü</option>
-          {categories.map((category) =>
-            <option key={category} value={category}>{category}</option>
-          )}
-        </select>
-      </div>
-*/}
       <div className={styles.productGridContainer}>
         {imageDivs}
+      </div>
+      <div>
+        {clickedImg && (
+          <Preview
+            clickedImg={clickedImg}
+            handleRotationRight={handleRotationRight}
+            setClickedImg={setClickedImg}
+            handleRotationLeft={handleRotationLeft}
+          />
+        )}
       </div>
     </div>
   </div>
