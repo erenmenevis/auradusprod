@@ -116,7 +116,6 @@ export default Categories;
 export async function getStaticProps(context) {
   const { params } = context;
   const category = params.category;
-  console.log(category);
   let resources;
   if(category === "dusakabinler"){
     const surgulu = await getCloudinaryResources("surgulu-kayar-kabinler");
@@ -126,7 +125,6 @@ export async function getStaticProps(context) {
   else{
     resources = await getCloudinaryResources(category);
   }
-  console.log("resources",  resources);
   const images = resources.map(resource => {
     return {
       id: resource.asset_id,
@@ -135,7 +133,6 @@ export async function getStaticProps(context) {
       tags: uniqueCategories(resource.tags)
     }
   });
-  //console.log(images);
   const categories = getCategories(images);
   return {
     props: {
