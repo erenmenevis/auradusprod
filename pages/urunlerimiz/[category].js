@@ -116,7 +116,17 @@ export default Categories;
 export async function getStaticProps(context) {
   const { params } = context;
   const category = params.category;
-  const resources = await getCloudinaryResources(category);
+  console.log(category);
+  let resources;
+  if(category === "dusakabinler"){
+    const surgulu = await getCloudinaryResources("surgulu-kayar-kabinler");
+    const menteseli = await getCloudinaryResources("menteseli-acilir-kabinler")
+    resources = surgulu.concat(menteseli);
+  }
+  else{
+    resources = await getCloudinaryResources(category);
+  }
+  console.log("resources",  resources);
   const images = resources.map(resource => {
     return {
       id: resource.asset_id,
@@ -125,6 +135,7 @@ export async function getStaticProps(context) {
       tags: uniqueCategories(resource.tags)
     }
   });
+  //console.log(images);
   const categories = getCategories(images);
   return {
     props: {
@@ -138,6 +149,7 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {
   return {
     paths: [
+      { params: { category: 'dusakabinler' } },
       { params: { category: 'menteseli-acilir-kabinler' } },
       { params: { category: 'surgulu-kayar-kabinler' } }, ,
       { params: { category: 'dus-tekneleri-ve-kuvet-sistemleri' } },

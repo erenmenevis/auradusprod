@@ -18,6 +18,7 @@ export default function Header() {
           <Nav className={`m-auto ${styles.nav}`}>
             <Nav.Link href="/">Anasayfa</Nav.Link>
             <NavDropdown title="Ürünlerimiz" id="basic-nav-dropdown">
+            <NavDropdown.Item href="/urunlerimiz/dusakabinler">Duşakabinler</NavDropdown.Item>
               <NavDropdown.Item href="/modeller/surgulu-kayar-kabinler">Sürgülü Kayar Kabinler</NavDropdown.Item>
               <NavDropdown.Item href="/modeller/menteseli-acilir-kabinler">Menteşeli Açılır Kabinler</NavDropdown.Item>
               <NavDropdown.Item href="/urunlerimiz/dus-tekneleri-ve-kuvet-sistemleri">Duş Tekneleri ve Küvet Sistemleri</NavDropdown.Item>
