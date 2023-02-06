@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Header from "./Header";
 import Footer from "./Footer";
 import styles from "../styles/Layout.module.css"
-import { FloatingWhatsApp } from 'react-floating-whatsapp'
 import StickyWhatsappButton from './StickyWhatsappButton';
 function Layout({ children }) {
     return (
@@ -20,12 +19,6 @@ function Layout({ children }) {
 
                 {children}
                 <StickyWhatsappButton/>
-                {/*
-                <FloatingWhatsApp phoneNumber="+905305447845" 
-                accountName="Aura Duşakabinleri" 
-                avatar="/logo-color.png" 
-                chatMessage="Merhaba! Nasıl yardımcı olabiliriz?" />
-                */}
                 <Footer />
             </div>
 
