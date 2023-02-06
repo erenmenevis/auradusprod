@@ -3,7 +3,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 export default function StickyWhatsappButton() {
     return (
-        <a href="https://web.whatsapp.com/send?phone=905411547901&amp;text=" target="_blank" rel="noreferrer" className="float" >
+        <a data-action="open" data-phone="905411547901" data-message="" href="https://web.whatsapp.com/send?phone=905411547901&amp;text=" target="_blank" rel="noreferrer" className="float" >
             <style jsx>{`
                 .float{
                     position:fixed;
