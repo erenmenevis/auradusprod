@@ -20,7 +20,7 @@ export default function Home(props) {
             <Link className={styles.link} href="/modeller/surgulu-kayar-kabinler">
                 <CardList
                     title="Sürgülü Kayar Kabinler"
-                    src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1669907036/Anasayfa/s%C3%BCrg%C3%BCll%C3%BC_kayar_kabinler_ozaato.jpg"
+                    src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1682362740/Anasayfa/surgulu_%C3%BCr%C3%BCnler_i%C3%A7in_ffeier.jpg"
                 />
             </Link>
             </div>
@@ -52,7 +52,7 @@ export default function Home(props) {
             <Link className={styles.link} href="/urunlerimiz/profil-ve-cam-secenekleri">
                 <CardList
                     title="Profil Renkleri"
-                    src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1669907036/Anasayfa/profil_secenekleri_grclbw.jpg"
+                    src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1682362743/Anasayfa/perfil_ve_cam_secenekleri_wmysz7.jpg"
                 />
             </Link>
             </div>
@@ -60,7 +60,7 @@ export default function Home(props) {
             <Link className={styles.link} href="/urunlerimiz/profil-ve-cam-secenekleri">
                 <CardList
                     title="Cam Seçenekleri"
-                    src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1669907036/Anasayfa/profil_secenekleri_grclbw.jpg"
+                    src="https://res.cloudinary.com/dslizsuil/image/upload/c_scale,h_500,w_400/v1682362743/Anasayfa/perfil_ve_cam_secenekleri_wmysz7.jpg"
                 />
             </Link>
             </div>
